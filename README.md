@@ -33,7 +33,7 @@ investment-proposal-manager/
 ├── package.json
 ├── README.md
 └── tsconfig.json
-``powershell script for generating folders and files in workspace`
+``powershell script for generating folders and files in workspace`````````````````````````````````````````````````````````````````
 # Set base path
 $base = "investment-proposal-manager-client"
 
@@ -55,6 +55,7 @@ $files = @(
     "$base/package.json",
     "$base/README.md",
     "$base/tsconfig.json",
+    "$base/app/globals.css,
     "$base/app/layout.tsx",
     "$base/app/page.tsx",
     "$base/app/login/page.tsx",
