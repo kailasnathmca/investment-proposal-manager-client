@@ -1,0 +1,10 @@
+/* app/globals.css */
+/* Import Tailwind CSS directives to include its base styles, components, and utilities. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Example of adding custom global styles if needed */
+/* body {
+  background-color: #f0f0f0;
+} */
