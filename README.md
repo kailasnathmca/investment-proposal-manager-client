@@ -33,8 +33,54 @@ investment-proposal-manager/
 ├── package.json
 ├── README.md
 └── tsconfig.json
-```
+``powershell script for generating folders and files in workspace`
+# Set base path
+$base = "investment-proposal-manager-client"
 
+# Define folders
+$folders = @(
+    "$base/app",
+    "$base/app/login",
+    "$base/app/proposals",
+    "$base/app/proposals/[id]",
+    "$base/app/components",
+    "$base/app/lib",
+    "$base/app/types",
+    "$base/public"
+)
+
+# Define files
+$files = @(
+    "$base/.gitignore",
+    "$base/package.json",
+    "$base/README.md",
+    "$base/tsconfig.json",
+    "$base/app/layout.tsx",
+    "$base/app/page.tsx",
+    "$base/app/login/page.tsx",
+    "$base/app/proposals/page.tsx",
+    "$base/app/proposals/[id]/page.tsx",
+    "$base/app/components/LoginForm.tsx",
+    "$base/app/components/ProposalList.tsx",
+    "$base/app/components/ProposalDetails.tsx",
+    "$base/app/components/ProposalForm.tsx",
+    "$base/app/components/ProposalActions.tsx",
+    "$base/app/components/AuditTrail.tsx",
+    "$base/app/lib/auth.ts",
+    "$base/app/lib/api.ts",
+    "$base/app/types/index.ts",
+    "$base/public/next.svg"
+)
+
+# Create folders
+foreach ($folder in $folders) {
+    New-Item -ItemType Directory -Path $folder -Force | Out-Null
+}
+
+# Create files
+foreach ($file in $files) {
+    New-Item -ItemType File -Path $file -Force | Out-Null
+}
 ---
 
 ### 1. `package.json`
